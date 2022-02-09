@@ -1,5 +1,7 @@
 import UIKit
 
+// 第二章 量值与基本数据类型
+
 var greeting = "Hello, playground"
 
 var str = "newValue"
@@ -87,3 +89,7 @@ if let weight = product,weight > 30{
 var  d = 22
 print(d)
 
+
+// 声明常数
+let t = 11
+print(t)
