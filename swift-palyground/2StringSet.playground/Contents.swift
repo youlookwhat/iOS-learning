@@ -234,4 +234,33 @@ var set5:Set = [1,2]
 var set6:Set = [2,3]
 var set7:Set = [1,2,3]
 var set8:Set = [1,2,3]
+// 判断是否是某个集合的子集
+set5.isSubset(of: set7)
+// 是否是某个集合的超集
+set7.isSuperset(of: set5)
+// 是否是某个集合的真子集
+set5.isStrictSubset(of: set7)
+// 是否是某个集合的真超集
+set7.isStrictSuperset(of: set8)
+
+// 遍历
+// 遍历元素
+for item in set7 {
+    print(item)
+}
+// 遍历集合的枚举，返回的是元祖，会带下标 (offset: 0, element: 1)
+for item in set7.enumerated() {
+    print(item)
+}
+// 遍历集合的下标
+for index in set7.indices {
+    print(set7[index])
+}
+// 可以排序后再进行遍历
+for item in set7.sorted(by: >) {
+    print(item) // 3 2 1
+}
+
+
+// -----------4.字典类型-----------
 
