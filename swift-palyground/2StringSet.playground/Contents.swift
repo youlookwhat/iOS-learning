@@ -263,4 +263,94 @@ for item in set7.sorted(by: >) {
 
 
 // -----------4.字典类型-----------
+// 声明字典：[param1:param2]
+var dic1 : [Int : String]
+var dic2 : Dictionary<Int , String>// 注意这个是逗号,上面的是冒号:
 
+// 字典创建与赋值
+dic1 = [1:"1",2:"2",3:"3"]
+dic2 = Dictionary(dictionaryLiteral: (1,"1"),(2,"2"),(3,"3"))
+var dic3 = ["1":"one"]
+var dic4 : [Int : Int] = [:]// 创建空字典
+var dic5 : Dictionary<Int,Int> = Dictionary()
+
+// 获取
+dic1.count
+if dic4.isEmpty {
+    print("空字典")
+}
+
+// 修改
+dic1[2]
+dic1[1] = "0"//修改            存在就更新。不存在就新增
+dic1[4] = "4"//添加一对新的键值
+
+// 存在更新，不存在不做操作
+dic1.updateValue("10", forKey: 1)
+dic1
+
+// 返回的是旧的值，没有就返回nil
+if let oldValue = dic1.updateValue("One", forKey: 1) {
+    print("Old value is \(oldValue)")
+}
+
+// 通过键获取值
+if let value = dic2[1] {
+    print("value is \(value)")
+}
+
+// 删除
+dic1.removeValue(forKey: 1)
+dic1.removeAll()
+
+// 遍历
+for item in dic2.keys {
+    print(item)
+}
+for item in dic2.values {
+    print(item)
+}
+for item in dic2 {
+    // (key: 1, value: "1")
+    print(item)
+}
+// 字典里面也是无序的
+for (key,value) in dic2 {
+    // 3: 3
+    print("\(key): \(value)")
+}
+
+
+// 对键排序然后再遍历
+for item in dic2.keys.sorted(by: >){
+    print(dic2[item]!)
+}
+
+// 练习及解析
+// 1.遍历字符串拿对应的字符
+var str11 = "China"
+var str21 = "MyLove"
+var str31 = str11 + str21
+for item in str31 {
+    if item == "L" {
+        print("有L")
+    }
+}
+
+// 2.删除字符串中的? !
+var stringOri2 = "asfasd!fsadf?23232!!你好?世界!"
+var stringStr2 = String()
+for index in stringOri2.indices {
+    if stringOri2[index] != "!" && stringOri2[index] != "?" {
+        stringStr2.append(stringOri2[index])
+    }
+}
+stringStr2
+
+//
+//var s = "abcdefg"
+//var from = String()
+//let ss = s.endIndex
+//for index in s {
+//    from.append(s.index(before: ss)!)
+//}
