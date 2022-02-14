@@ -63,7 +63,7 @@ if com1 < com2 {
 }
 
 var string = "Hello-swift"
-var startIndex = string.startIndex// 获取到的是Index类型，不是证书类型
+var startIndex = string.startIndex// 获取到的是Index类型，不是整数类型
 var endIndex = string.endIndex
 
 var char = string[string.index(after: startIndex)]// 获取后一个index的字符 e
@@ -75,7 +75,7 @@ var subString2 = string[string.index(endIndex, offsetBy: -5)..<endIndex]//swift
 
 // 获取范围、拼接、插入、替换、删除
 
-// 获取某个子串在父串中的范围，获取后不知道怎么用
+// 获取某个子串在父串中的范围，获取后不知道怎么用。练习的时候知道是可以用来替换用的
 var range = string.range(of: "Hello")// Optional(Range(Swift.String.Index(_rawBits: 1)..<Swift.String.Index(_rawBits: 327680)))
 // 追加一个字符，此时 string="Hello-swift!"
 string.append(Character("!"))
@@ -347,10 +347,94 @@ for index in stringOri2.indices {
 }
 stringStr2
 
-//
-//var s = "abcdefg"
-//var from = String()
-//let ss = s.endIndex
-//for index in s {
-//    from.append(s.index(before: ss)!)
-//}
+
+// 3.将字符串倒序打印
+var stringStr3 = "abcdefg"
+var resutleStr = String()
+// 获取到的是Index类型
+var index3 = stringStr3.endIndex
+
+while index3 > stringStr3.startIndex {
+    index3 = stringStr3.index(before: index3)
+    resutleStr.append(stringStr3[index3])
+}
+print(resutleStr)
+
+// 4.插入字符串 * index意义
+var stringOri4 = "我爱你中国"
+var stringRes4 = String()
+for index in stringOri4.indices {
+    stringRes4.append(stringOri4[index])
+    if index < stringOri4.index(before: stringOri4.endIndex) {
+        // 如果没有此条件就在下面去掉最后一个字符
+        stringRes4.append("*")
+    }
+}
+// 我*爱*你*中*国* 移除最后一个*
+//stringRes4.removeLast()
+// 我*爱*你*中*国
+print(stringRes4)
+
+// 5.替换 将所有的abc替换成Hellot range replaceSubrange
+var stringOri5 = "abc 中国 abc 美国 abc 德国 abc 法国"
+var range2 = stringOri5.range(of: "abc")
+while range2 != nil {
+    stringOri5.replaceSubrange(range2!, with: "Hello")
+    range2 = stringOri5.range(of: "abc")
+}
+print(stringOri5)
+
+// 6.进行正负号翻转
+var stringOri6 = "-123"
+var stringOri_6 = "+456"
+if stringOri6.hasPrefix("-") {
+    // 首位是"-"  ..< 不包含最后一位
+    stringOri6.replaceSubrange(stringOri6.startIndex ..< stringOri6.index(after: stringOri6.startIndex), with: "+")
+}
+if stringOri_6.hasPrefix("+") {
+    stringOri_6.replaceSubrange(stringOri_6.startIndex ..< stringOri_6.index(after: stringOri_6.startIndex), with: "-")
+}
+stringOri6
+stringOri_6
+
+// 7.将下列数组中的0去掉，返回新的数组，并打印
+var arrayOri1 = [1,13,45,0,0,33,0,44]
+var arrayRes1 = Array<Int>()
+
+for index in arrayOri1.indices {
+    if arrayOri1[index] != 0 {
+        arrayRes1.append(arrayOri1[index])
+    }
+}
+print(arrayRes1)
+
+// 8.定义一个包含10个元素的数组，对其进行赋值，使每个元素的值等于其下标，然后输出，最后将数组倒置后输出
+var arrayRes2 = Array<Int>()
+for index in 0...9 {
+    arrayRes2.append(index)
+}
+print(arrayRes2)
+// 进行倒置排序
+arrayRes2.sort(by: {(a , b) -> Bool in
+    return a > b})
+//arrayRes2.sort(by: {(a , b) -> Bool in return a>b})
+print(arrayRes2)
+
+
+// 10.使用字典对成绩排序
+var dicOri4 = ["小明":98,"小芳":22,"小雪":100]
+
+// 排序
+dicOri4.sorted(by: {(st1,st2) -> Bool in
+    return st1.value > st2.value
+})
+for item in dicOri4 {
+    print(item)
+}
+
+// 排序加循环打印
+for item in dicOri4.sorted(by: {(student1 , student2) -> Bool in
+    return student1.value > student2.value
+}){
+    print(item)
+}
