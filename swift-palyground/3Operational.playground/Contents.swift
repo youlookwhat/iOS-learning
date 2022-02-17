@@ -1,4 +1,5 @@
 import UIKit
+import Darwin
 
 var greeting = "Hello, playground"
 
@@ -71,11 +72,88 @@ switch num {
 var tuple = (0,0)
 switch tuple {
     case (0,1):
+        // 严格匹配
         print("Sure")
-    case (_,1):
-        print("Sure")
+    case (_,0):
+        // 匹配第二个
+        print("Sure2")
+        fallthrough // 默认自动中断，加上这个后可以不中断
     case (0...2,0...2):
+        // 匹配区间
         print("区间")
     default:
         print("default")
+}
+
+// 捕获元组的元素
+var tuple2 = (0,0)
+switch tuple2 {
+    case (let a , 1):// 捕获第一个元素，如果第二个元素不匹配则捕获失败
+        if a == 0 {
+            print("a is 0")
+        }
+    case (let a , 0) where a == 0: // 通过where再进行一次条件判断
+        print("b==0 且 a==0")
+    case let(a , b):// 捕获两个 与 (let a, let b)一样
+        print(a , b)
+//    default:
+//        print("默认")
+}
+
+// break 后面可以指定中断哪个循环结构
+Mylabel :for index in 0...9 {
+    for index2 in 0...3 {
+        if index2 == 2 {
+            // 直接中断外层，默认中断内层
+            break Mylabel
+        }
+        print("\(index) -- \(index2)")
+    }
+}
+
+// return 语句
+func myFunc() -> Int {
+    return 0
+}
+func myFunc1() {
+    return
+}
+
+// throw 抛异常
+enum MyError :Error {
+    case errorOne
+    case errorTwo
+}
+func newFunc() throws {
+    throw MyError.errorOne
+}
+
+
+// guard-else 解决在方法里使用return，优化代码
+func myFuncTwo(param:Int) {
+    guard param>0 else {
+        return
+    }
+    print("执行>0的代码")
+}
+
+myFuncTwo(param: 1)
+
+
+// 练习与解析
+// 1.计算时不能和小数一起计算？
+var a = 3 * 2.5
+var b = 11 * 0.5
+var sum = 5 * 2 + 1 * 3 + a + b
+print(sum)
+
+// 2.生成随机数 1-7
+var rand = arc4random() % 7 + 1
+
+// 3.处理if
+var yuwen = 90
+var shuxue = 90
+var yingyu = 61
+if yuwen > 60 && shuxue > 60 && yingyu > 60 && (yuwen+shuxue+yingyu)>200 {
+    print("合格")
 }
