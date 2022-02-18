@@ -157,3 +157,41 @@ var yingyu = 61
 if yuwen > 60 && shuxue > 60 && yingyu > 60 && (yuwen+shuxue+yingyu)>200 {
     print("合格")
 }
+
+// 4.编写闰年判断表达式  1.能被400整除 2.能被4整除，不能被100整除 1或2
+var year = 2000
+if year%400==0 || (year%4==0 && year%100 != 0) { // !=0 前后要有空格
+    print("闰年")
+}
+
+// 5.三目运算
+var fen = 20
+var people = fen > 30 ? "主选手" : "辅助选手"// > 前后不能有一个空格，要么都有要么都没有
+
+// 6.打印图案
+for index in 1...4 {
+    // 换行
+    print("")
+    for index2 in 1...10 {
+        if index==1 || index==4 {
+            // 后面是去掉换行
+            print("*",separator: "",terminator: "")
+        } else if index2==1 || index2==10 {
+            print("*",separator: "",terminator: "")
+        } else {
+            print("?",separator: "",terminator: "")
+        }
+    }
+}
+
+// 7.打印水仙花数 各位数字的立方和等于该数本身
+print("")
+for index in 100...999 {
+    let bai = index/100
+    let shi  = index/10%10
+    let ge = index%10
+    if index == bai*bai*bai + shi*shi*shi + ge*ge*ge {
+     print("水仙数 \(index)")
+    }
+}
+
