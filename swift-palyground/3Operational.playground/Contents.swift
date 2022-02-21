@@ -195,3 +195,9 @@ for index in 100...999 {
     }
 }
 
+// 8
+var count = 1
+for _ in 1...9 {
+    count = (count+1)*2
+}
+print(count)
