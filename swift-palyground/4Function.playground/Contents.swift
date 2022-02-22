@@ -138,3 +138,103 @@ func myFunc16() -> (Int,Int)->Int {
 }
 // 调用直接两个括号
 myFunc16()(1, 100)
+
+
+// 5.3 理解闭包结构
+// 标准函数
+func myFunc17(param:Int)->Int{
+    return param*param
+}
+// 闭包形式 {(参数列表)->返回值 in 闭包体}
+let myClosures = {
+    (param:Int)->Int in
+    return param*param
+}
+myFunc17(param: 1)
+myClosures(1)
+
+// 闭包返回值可以省略
+let myClosures2 = {
+    (param:Int) in return param*param
+}
+myClosures2(2)
+
+// 排序函数理解闭包 加入inout标识支持修改
+func mySort(array:inout Array<Any>, sortClosure:(Any,Any)->Bool) -> Array<Any>{
+    
+    // 冒泡排序
+    for indexI in array.indices {
+        if indexI == array.count-1 {
+            break
+        }
+        for indexJ in 0 ... ((array.count-1)-indexI-1){
+            if sortClosure(array[indexJ],array[indexJ+1]) {
+                
+            } else{
+              // 进行元素交换
+                array.swapAt(indexJ, indexJ+1)
+            }
+        }
+    }
+    return array
+}
+// 测试一般的数组 in后面不能加{}
+var array:Array<Any> = [1,2,3,5,6,3,4]
+let sort1 = {(i:Any,nextI:Any)->Bool in
+    return (i as! Int)<(nextI as! Int)}
+mySort(array: &array,sortClosure: sort1)
+
+// 编写一个自定义类来进行排序
+class Student :CustomStringConvertible {
+    let chengji:Int
+    let name:String
+    init(_ name:String,_ chengji:Int){
+        self.name = name
+        self.chengji=chengji
+    }
+    
+    //自定义打印方法，相当于toString
+    var description: String {
+        return ("\(name)成绩为：\(chengji)")
+    }
+}
+
+let xiaomi = Student("小米",100)
+let xiaoming = Student("小明",90)
+var stuArray :Array<Any> = [xiaomi,xiaoming]
+let result = mySort(array: &stuArray, sortClosure: {(i:Any,nextI:Any) in return
+    (i as! Student).chengji < (nextI as! Student).chengji
+    })
+print(result)
+
+// 更省略的方式
+let result23 = mySort(array: &stuArray,sortClosure:{
+    ($0 as! Student).chengji > ($1 as! Student).chengji
+})
+// 后置闭包，省略了key和将 {} 后置
+let result22 = mySort(array: &stuArray){
+    ($0 as! Student).chengji > ($1 as! Student).chengji
+}
+print(result22)
+
+// 因为闭包可以后置，那么如果只有一个参数且为闭包时，使用时可以简写
+// 非逃逸闭包
+func myFunc15(closure:(Int,Int)->Bool){
+        print("闭包简写")
+}
+// 使用时
+myFunc15 {
+    $0 > $1
+}
+
+
+// 自动闭包：不能有参数，且表达式只能是一句话
+func myFunc16(closure: @autoclosure () -> Bool){
+    print("自动闭包")
+}
+myFunc16(closure: 1+2+3>10)
+
+// 逃逸闭包  可以作为返回值返回，通常用于异步操作
+func myFunc17(closure: @autoclosure @escaping () -> Bool){
+    
+}
