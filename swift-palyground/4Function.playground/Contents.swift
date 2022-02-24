@@ -238,3 +238,19 @@ myFunc16(closure: 1+2+3>10)
 func myFunc17(closure: @autoclosure @escaping () -> Bool){
     
 }
+
+// 练习
+// 1.编写阶乘的函数
+func funcOne(param:Int)->Int{
+    guard param>0 else {
+        return 0
+    }
+    var tmp = param
+    var result = 1
+    while tmp > 0 {
+        result *= tmp
+        tmp -= 1
+    }
+   return result
+}
+funcOne(param: 4) // 4*3*2*1
