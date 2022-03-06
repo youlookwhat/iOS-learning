@@ -12,6 +12,7 @@ struct Car {
     var brand:String
     // 油量
     var petrol:Int
+    // 修改了属性的值，需要用mutating修饰
     mutating func drive(){
         if petrol>0 {
             petrol -= 10
