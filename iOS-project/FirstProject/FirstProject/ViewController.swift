@@ -25,14 +25,21 @@ class ViewController: UIViewController {
         // detailDisclosure 详情 有图标
         let uiButton = UIButton(type: UIButton.ButtonType.system)
         // 计算高度是一个麻烦事
-        uiButton.frame = CGRect(x: 20, y: 400, width: 100, height: 30)
-        uiButton.backgroundColor = UIColor.purple
+        uiButton.frame = CGRect(x: 20, y: 400, width: 100, height: 100)
+        uiButton.backgroundColor = UIColor.blue
         uiButton.setTitle("标题", for: .normal)
         uiButton.setTitleColor(UIColor.white, for: .normal)
 //        uiButton.setTitleColor(UIColor.blue, for: .selected)
         // 添加点击事件 touchUpInside按下了并在按钮范围内抬起
         uiButton.addTarget(self, action: #selector(touchBegin), for: UIControl.Event.touchUpInside)
-        uiButton.setImage(UIImage(named: "beian"), for: .normal)
+        // 图片在文字左边
+        uiButton.setImage(UIImage(named: "image"), for: .normal)
+        // 图片背景
+        uiButton.setBackgroundImage(UIImage(named: "image"), for: .normal)
+        // 设置标题文字的位置偏移
+        uiButton.titleEdgeInsets = UIEdgeInsets(top: 50, left: 0, bottom: 0, right: 20)
+        // 设置图片文字的位置偏移
+        uiButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 30, bottom: 30, right: 0)
         self.view.addSubview(uiButton)
     }
     
