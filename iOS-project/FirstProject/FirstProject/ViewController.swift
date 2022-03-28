@@ -15,8 +15,32 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         studyUILable()
+        studyUIButton()
     }
 
+   /*
+    * 按钮控件 UIButton
+    */
+    func studyUIButton() {
+        // detailDisclosure 详情 有图标
+        let uiButton = UIButton(type: UIButton.ButtonType.system)
+        // 计算高度是一个麻烦事
+        uiButton.frame = CGRect(x: 20, y: 400, width: 100, height: 30)
+        uiButton.backgroundColor = UIColor.purple
+        uiButton.setTitle("标题", for: .normal)
+        uiButton.setTitleColor(UIColor.white, for: .normal)
+//        uiButton.setTitleColor(UIColor.blue, for: .selected)
+        // 添加点击事件 touchUpInside按下了并在按钮范围内抬起
+        uiButton.addTarget(self, action: #selector(touchBegin), for: UIControl.Event.touchUpInside)
+        uiButton.setImage(UIImage(named: "beian"), for: .normal)
+        self.view.addSubview(uiButton)
+    }
+    
+    @objc func touchBegin(){
+        print("点击并抬起")
+    }
+
+    
 
     /*
      * 便签控件 UILable
