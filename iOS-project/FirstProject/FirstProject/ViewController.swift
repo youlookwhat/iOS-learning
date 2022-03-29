@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,UITextFieldDelegate  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,8 +24,50 @@ class ViewController: UIViewController {
     * 文本输入框控件 UITextField
     */
     func studyUITextField(){
+        let uiTextField = UITextField(frame: CGRect(x: 30, y: 580, width: 200, height: 30))
+        // 输入框边框风格 roundedRect圆角边框 line直线边框
+        uiTextField.borderStyle = UITextField.BorderStyle.roundedRect
+        uiTextField.textColor = UIColor.red
+        uiTextField.textAlignment = NSTextAlignment.center
+        uiTextField.placeholder = "请输入姓名"
         
+        // 设置左右视图
+        let imageView = UIImageView(image: UIImage(named: "image"))
+        imageView.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        let imageView2 = UIImageView(image: UIImage(named: "image"))
+        imageView2.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        uiTextField.leftView = imageView
+        uiTextField.rightView = imageView2
+        uiTextField.leftViewMode = UITextField.ViewMode.always
+        // whileEditing编辑状态才显示
+        uiTextField.rightViewMode = UITextField.ViewMode.never
+        // 清除按钮
+        uiTextField.clearButtonMode = UITextField.ViewMode.always
+        
+        
+        uiTextField.delegate = self
+        
+        self.view.addSubview(uiTextField)
     }
+    
+    
+//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        return true
+//    }
+
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+//    // 已经编辑时调用
+//     func textFieldDidBeginEditing(_ textField: UITextField) {
+//        print(textField.text ?? 0)
+//    }
+//     func textFieldDidEndEditing(_ textField: UITextField) {
+//        print("结束")
+//    }
     
     
     /*
