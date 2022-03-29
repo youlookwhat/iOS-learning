@@ -16,6 +16,53 @@ class ViewController: UIViewController {
         
         studyUILable()
         studyUIButton()
+        studyUIImageview()
+        studyUITextField()
+    }
+    
+    /*
+    * 文本输入框控件 UITextField
+    */
+    func studyUITextField(){
+        
+    }
+    
+    
+    /*
+     * 图片显示控件 UIImageview
+     */
+    func studyUIImageview(){
+        // 图片素材创建实例
+        let image = UIImage(named: "app_loading0")
+        // 以路径创建
+//        UIImage(contentsOfFile: "filePath")
+        // 以data数据创建
+//        UIImage(data: Data())
+        let size = image?.size
+        print(size)// Optional((20.0, 20.0))
+        
+        // 创建显示控件
+        let uiimageview = UIImageView(image: image)
+        uiimageview.frame = CGRect(x: 30, y: 520, width: 40, height: 40)
+        
+        self.view.addSubview(uiimageview)
+        
+        
+        // 创建动态播放图 帧动画
+        var imageArray = Array<UIImage>()
+        for index in 0...3 {
+            let image = UIImage(named: "app_loading\(index)")
+            imageArray.append(image!)
+        }
+        let gifImageView = UIImageView(frame: CGRect(x: 130, y: 520, width: 40, height: 40))
+        gifImageView.animationImages = imageArray
+        // 动画播放时长
+        gifImageView.animationDuration = 1
+        // 0表示无线播放
+        gifImageView.animationRepeatCount = 0
+        self.view.addSubview(gifImageView)
+        gifImageView.startAnimating()
+        
     }
 
    /*
