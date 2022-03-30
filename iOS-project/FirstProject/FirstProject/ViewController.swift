@@ -14,6 +14,9 @@ class ViewController: UIViewController,UITextFieldDelegate  {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
+        
+        
         studyUILable()
         studyUIButton()
         studyUIImageview()
@@ -21,6 +24,25 @@ class ViewController: UIViewController,UITextFieldDelegate  {
         studyUISwitch()
         studyUIPageControl()
         studyUISegmentedControl()
+        
+        jumpViewControllerTwo()
+        
+    }
+    
+    /*跳到另一个页面*/
+    func jumpViewControllerTwo(){
+        // 还是要先设置样式
+        let bt = UIButton(type: UIButton.ButtonType.system)
+        bt.frame = CGRect(x: 30, y: 760, width: 300, height: 40)
+        bt.setTitle("跳转到新的页面", for: .normal)
+        bt.backgroundColor = UIColor.yellow
+        bt.addTarget(self, action: #selector(jump), for: UIControl.Event.touchUpInside)
+        self.view.addSubview(bt)
+    }
+    
+    @objc func jump(){
+        // 吊起的是一个页面，像是一个弹窗，会露出一点
+        self.present(ViewControllerTwo(), animated: true, completion: nil)
     }
     
     /*
