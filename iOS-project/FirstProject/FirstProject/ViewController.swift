@@ -19,8 +19,32 @@ class ViewController: UIViewController,UITextFieldDelegate  {
         studyUIImageview()
         studyUITextField()
         studyUISwitch()
+        studyUIPageControl()
     }
     
+    /*
+    * 分页控制器 UIPageControl
+    * 类似于安卓轮播图上的指示器
+    */
+    func studyUIPageControl(){
+        let pc = UIPageControl(frame: CGRect(x: 30, y: 660, width: 280, height: 30))
+        // 页数
+        pc.numberOfPages = 10
+        pc.backgroundColor = UIColor.red
+        // 点的背景色
+        pc.pageIndicatorTintColor = UIColor.white
+        // 当前点的颜色
+        pc.currentPageIndicatorTintColor = UIColor.blue
+        pc.currentPage = 3
+        pc.addTarget(self, action: #selector(changePc), for: UIControl.Event.valueChanged)
+        self.view.addSubview(pc)
+    }
+    
+    @objc func changePc(pc:UIPageControl){
+        print("当前位置：\(pc.currentPage)")
+    }
+    
+        
     /*
     * 开关控件 UISwitch
     */
