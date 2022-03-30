@@ -50,24 +50,47 @@ class ViewController: UIViewController,UITextFieldDelegate  {
         self.view.addSubview(uiTextField)
     }
     
-    
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        return true
-//    }
 
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        // 失去焦点（按下return键）
+        print("结束编辑了----"+textField.text!)
+    }
+    
+    /*只能输入11位的电话号码*/
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        // 记录的是变化之前的文本
+        print("文本发生变化了----"+textField.text!)
+        if (textField.text?.count)!>=11 {
+            // 大于等于11位不能再输入
+            return false
+        }
+        if (string.first)! >= "0" && (string.first)! <= "9"{
+            return true
+        }
+        return false
+    }
+    
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        print("输入框内容被清空了")
+        return true
+    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        // 按下了键盘的return键
+        print("按下了键盘的return键")
         textField.resignFirstResponder()
         return true
     }
     
-//    // 已经编辑时调用
-//     func textFieldDidBeginEditing(_ textField: UITextField) {
-//        print(textField.text ?? 0)
-//    }
-//     func textFieldDidEndEditing(_ textField: UITextField) {
-//        print("结束")
-//    }
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        // 聚焦时调用2
+        print("已经开始编辑")
+    }
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        // 聚焦时调用1
+        print("即将进入编辑时")
+        return true
+    }
     
     
     /*
