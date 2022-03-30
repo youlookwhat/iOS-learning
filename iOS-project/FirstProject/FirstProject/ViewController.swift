@@ -20,6 +20,51 @@ class ViewController: UIViewController,UITextFieldDelegate  {
         studyUITextField()
         studyUISwitch()
         studyUIPageControl()
+        studyUISegmentedControl()
+    }
+    
+    /*
+     * 分部控制器 UISegmentedControl
+     */
+    func studyUISegmentedControl(){
+        let sc = UISegmentedControl(items: ["按钮1","按钮2","按钮3","按钮4"])
+        // 一共414？ 354 = 414-60
+        sc.frame = CGRect(x: 30, y: 700, width: 354, height: 30)
+        // 控件风格颜色，看起来没用？
+        sc.tintColor = UIColor.green
+        // 选中的颜色
+        sc.selectedSegmentTintColor = UIColor.yellow
+        // 默认选中0
+        sc.selectedSegmentIndex = 0
+        // 添加事件
+        sc.addTarget(self, action: #selector(changeSc), for: UIControl.Event.valueChanged)
+        
+        // 自适应宽度
+        sc.apportionsSegmentWidthsByContent = true
+        
+        // 增删改
+//        sc.insertSegment(withTitle: "插入", at: 1, animated: true)
+        
+        self.view.addSubview(sc)
+    }
+    
+    @objc func changeSc(sc:UISegmentedControl){
+        print("当前选中\(sc.selectedSegmentIndex)")
+        if sc.selectedSegmentIndex == 0 {
+            // 增
+            sc.insertSegment(withTitle: "插入", at: 1, animated: true)
+        } else if sc.selectedSegmentIndex == 1 {
+            // 删
+            sc.removeSegment(at: 1, animated: true)
+        } else if sc.selectedSegmentIndex == 2 {
+            // 改
+            sc.setTitle("修改", forSegmentAt: 2)
+            
+            // 改为图片，可以单独设置各个item的宽度
+            sc.setImage(UIImage(named: "image"), forSegmentAt: 3)
+//            sc.setWidth(30, forSegmentAt: 3)
+        }
+    
     }
     
     /*
