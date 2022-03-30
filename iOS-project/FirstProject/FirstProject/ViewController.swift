@@ -18,7 +18,26 @@ class ViewController: UIViewController,UITextFieldDelegate  {
         studyUIButton()
         studyUIImageview()
         studyUITextField()
+        studyUISwitch()
     }
+    
+    /*
+    * 开关控件 UISwitch
+    */
+    func studyUISwitch(){
+        let uiSwitch = UISwitch(frame: CGRect(x: 30, y: 620, width: 60, height: 40))
+//        uiSwitch.center = CGPoint(x: 100, y: 100)
+        uiSwitch.onTintColor = UIColor.green
+        uiSwitch.onTintColor = UIColor.red
+        uiSwitch.thumbTintColor = UIColor.purple
+        uiSwitch.isOn = true
+        uiSwitch.addTarget(self, action: #selector(change), for: UIControl.Event.valueChanged)
+        self.view.addSubview(uiSwitch)
+    }
+    @objc func change(swi:UISwitch){
+        print("开关状态：\(swi.isOn)")
+    }
+    
     
     /*
     * 文本输入框控件 UITextField
