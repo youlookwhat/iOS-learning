@@ -20,9 +20,38 @@ class ViewControllerTwo: UIViewController {
         setPageStyle()
         
         
+        studyUISilder()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    /*
+     * 滑块控件  相当于安卓的seek
+     */
+    func studyUISilder(){
+        let slider = UISlider(frame: CGRect(x: 20, y: 80, width: 280, height: 30))
+        slider.maximumValue = 10
+        slider.minimumValue = 0
+        slider.value = 5
+        // 左进度条颜色
+        slider.minimumTrackTintColor = UIColor.red
+        slider.maximumTrackTintColor = UIColor.green
+        slider.backgroundColor = UIColor.white
+        // 指示器的图标
+        slider.setThumbImage(UIImage(named: "image"), for: .normal)
+//        slider.setMinimumTrackImage(UIImage(named: "app_loading0"), for: .normal)
+//        slider.setMaximumTrackImage(UIImage(named: "app_loading1"), for: .normal)
+        
+        slider.addTarget(self, action: #selector(sliderFunc), for: UIControl.Event.valueChanged)
+        
+        // 是否可滑动
+        slider.isContinuous = true
+        self.view.addSubview(slider)
+    }
+    
+    @objc func sliderFunc(slide:UISlider){
+        print(slide.value)
     }
     
     func setPageStyle(){
