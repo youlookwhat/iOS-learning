@@ -25,9 +25,28 @@ class ViewControllerTwo: UIViewController {
         studyUISilder()
         studyUIActivityIndicatorView()
         studyUIProgressView()
+        studyUIStepper()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    /*
+     * 步进器控件
+     */
+    func studyUIStepper(){
+        let stepper = UIStepper(frame: CGRect(x: 20, y: 150, width: 0, height: 0))
+        stepper.tintColor = UIColor.red
+        stepper.maximumValue = 10
+        stepper.minimumValue = 0
+        stepper.stepValue = 1
+        stepper.wraps = false
+        stepper.addTarget(self, action: #selector(stepperFunc), for: UIControl.Event.valueChanged)
+        self.view.addSubview(stepper)
+    }
+    
+    @objc func stepperFunc(stepper: UIStepper){
+        print(stepper.value)
     }
     
     /*
