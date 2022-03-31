@@ -11,8 +11,9 @@ import UIKit
 /*
  * 第14章 UI控件与逻辑交互
  */
-class ViewControllerTwo: UIViewController {
+class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    // 加载中框
     private var aiv : UIActivityIndicatorView? = nil;
     
     override func viewDidLoad() {
@@ -26,9 +27,74 @@ class ViewControllerTwo: UIViewController {
         studyUIActivityIndicatorView()
         studyUIProgressView()
         studyUIStepper()
+        studyUIPickerView()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    /*
+     * 选择器控件
+     */
+    func studyUIPickerView(){
+        let pview = UIPickerView(frame: CGRect(x: 20, y: 200, width: 354, height: 200))
+        // 代理
+        pview.delegate = self
+        // 数据源
+        pview.dataSource = self
+        
+        // 重新加载某个分组
+//        pview.reloadComponent(1)
+        // 重新加载全部分组
+//        pview.reloadAllComponents()
+        
+        self.view.addSubview(pview)
+    }
+    
+    // 分组数
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 2
+    }
+    // 每组的行数
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 10
+    }
+    // 创建标题：设置数据的位置
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return "第\(component+1)组，第\(row+1)行"
+    }
+    // 对显示文本属性自定义
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let attr = NSMutableAttributedString(string: "第\(component+1)组，第\(row+1)行")
+        attr.addAttributes([NSMutableAttributedString.Key.foregroundColor:UIColor.red], range: NSRange(location: 0, length: attr.length))
+        return attr
+    }
+    // 设置为图片
+//    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+//        let image = UIImage(named: "image")
+//        let imageview = UIImageView(image: image)
+//        imageview.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+//        return imageview
+//    }
+    // 选择的位置
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("用户选择了第\(component+1)列，第\(row+1)行")
+    }
+    // 设置组的宽度
+    func pickerView(_ pickerView: UIPickerView, widthForComponent component: Int) -> CGFloat {
+        if component==0 {
+            return 200
+        } else {
+            return 150
+        }
+    }
+    // 设置组的高度
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+//       if component==0 {
+            return 40
+//        } else {
+//            return 20
+//        }
     }
     
     /*
@@ -46,7 +112,7 @@ class ViewControllerTwo: UIViewController {
     }
     
     @objc func stepperFunc(stepper: UIStepper){
-        print(stepper.value)
+        print("Stepper：\(stepper.value)")
     }
     
     /*
