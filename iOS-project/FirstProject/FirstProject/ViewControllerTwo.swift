@@ -24,9 +24,23 @@ class ViewControllerTwo: UIViewController {
         
         studyUISilder()
         studyUIActivityIndicatorView()
+        studyUIProgressView()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    /*
+    * 进度条控件
+    */
+    func studyUIProgressView(){
+        let pv = UIProgressView(frame: CGRect(x: 20, y: 130, width: 280, height: 10))
+        pv.progressTintColor = UIColor.red
+//        pv.progressImage = UIImage(named: "image")
+        // 未走过的颜色
+        pv.trackTintColor = UIColor.gray
+        pv.setProgress(0.5, animated: true)
+        self.view.addSubview(pv)
     }
     
     /*
