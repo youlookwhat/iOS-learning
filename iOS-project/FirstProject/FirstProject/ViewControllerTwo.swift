@@ -13,6 +13,8 @@ import UIKit
  */
 class ViewControllerTwo: UIViewController {
 
+    private var aiv : UIActivityIndicatorView? = nil;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,9 +23,23 @@ class ViewControllerTwo: UIViewController {
         
         
         studyUISilder()
+        studyUIActivityIndicatorView()
         
         
         // Do any additional setup after loading the view.
+    }
+    
+    /*
+     * 活动指示器 加载中的loading
+     */
+    func studyUIActivityIndicatorView(){
+        // 首先设置风格
+         aiv = UIActivityIndicatorView(style: UIActivityIndicatorView.Style.medium)
+        aiv?.color = UIColor.red
+        // 位置
+        aiv?.center = self.view.center
+        aiv?.startAnimating()
+        self.view.addSubview(aiv!)
     }
     
     /*
@@ -66,6 +82,8 @@ class ViewControllerTwo: UIViewController {
     
     @objc func back(){
         self.dismiss(animated: true, completion: nil)
+        // 停止转圈
+        aiv?.stopAnimating()
     }
 
     /*
