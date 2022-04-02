@@ -28,10 +28,30 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         studyUIProgressView()
         studyUIStepper()
         studyUIPickerView()
+        studyUIDatePicker()
         
         
         // Do any additional setup after loading the view.
     }
+    
+    /*
+     * 时间选择器控件
+     */
+    func studyUIDatePicker(){
+        let dp = UIDatePicker(frame: CGRect(x: 20, y: 410, width: 354, height: 200))
+        // countDownTimer 计时模式； date 日期模式
+        dp.datePickerMode = UIDatePicker.Mode.dateAndTime
+        dp.addTarget(self, action: #selector(pickerFunc), for: UIControl.Event.valueChanged)
+        self.view.addSubview(dp)
+    }
+    
+    @objc func pickerFunc(datePicker:UIDatePicker){
+        let date = datePicker.date
+        let time = datePicker.countDownDuration
+        print(date,time)
+    }
+    
+    
     
     /*
      * 选择器控件
