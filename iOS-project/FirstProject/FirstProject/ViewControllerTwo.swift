@@ -29,16 +29,72 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
         studyUIStepper()
         studyUIPickerView()
         studyUIDatePicker()
+        studyUISearchBar()
         
         
         // Do any additional setup after loading the view.
     }
     
     /*
+     * 搜索栏控件
+     */
+    func studyUISearchBar(){
+       let searchBar = UISearchBar(frame: CGRect(x: 20, y: 200, width: 354, height: 80))
+        searchBar.searchBarStyle = UISearchBar.Style.minimal
+        // 光标颜色
+        searchBar.tintColor = UIColor.red
+        // 将背景设置为图片
+//        serachBar.backgroundImage
+        searchBar.placeholder = "请输入内容"
+        // 标题
+        searchBar.prompt = "标题"
+        // 取消按钮
+        searchBar.showsCancelButton = true
+        // 书库按钮
+        searchBar.showsBookmarkButton = true
+        // 搜索结果下拉按钮
+//        serachBar.showsSearchResultsButton = true
+        // 设置图标 search搜索按钮，clear清除按钮，bookmark书库按钮，resultList搜索结果按钮
+        searchBar.setImage(UIImage(named: "image"), for: .search, state: .normal)
+        
+        // 显示控件的附件视图
+        searchBar.showsScopeBar = true
+        searchBar.scopeButtonTitles = ["女鞋","男装","男鞋","女装"]
+        searchBar.selectedScopeButtonIndex = 0
+//        searchBar.frame = CGRect(x: 20, y: 250, width: 354, height: 30)
+        
+        
+        searchBar.delegate = searchClass
+        
+        self.view.addSubview(searchBar)
+    }
+    // 需要为成员变量
+    let searchClass = SearchController()
+    class SearchController : ViewController, UISearchBarDelegate {
+        func searchBarBookmarkButtonClicked(_ searchBar: UISearchBar) {
+            print("点击了书库")
+        }
+        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            print("点击了取消按钮")
+        }
+        func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+            print("已经结束了编辑状态")
+        }
+        func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+            print("搜索的文本发现变化时：\(searchText)")
+        }
+        func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+            print(selectedScope)
+//            print("搜索的标签被点击：\(selectedScope)")
+        }
+    }
+    
+    
+    /*
      * 时间选择器控件
      */
     func studyUIDatePicker(){
-        let dp = UIDatePicker(frame: CGRect(x: 20, y: 410, width: 354, height: 200))
+        let dp = UIDatePicker(frame: CGRect(x: 20, y: 480, width: 354, height: 200))
         // countDownTimer 计时模式； date 日期模式
         dp.datePickerMode = UIDatePicker.Mode.dateAndTime
         dp.addTarget(self, action: #selector(pickerFunc), for: UIControl.Event.valueChanged)
@@ -57,7 +113,7 @@ class ViewControllerTwo: UIViewController, UIPickerViewDelegate, UIPickerViewDat
      * 选择器控件
      */
     func studyUIPickerView(){
-        let pview = UIPickerView(frame: CGRect(x: 20, y: 200, width: 354, height: 200))
+        let pview = UIPickerView(frame: CGRect(x: 20, y: 270, width: 354, height: 200))
         // 代理
         pview.delegate = self
         // 数据源
