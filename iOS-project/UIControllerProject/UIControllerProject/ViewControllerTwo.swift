@@ -30,7 +30,13 @@ class ViewControllerTwo: UIViewController {
         
     }
     
+    var closure:((String)->Void)?
+    
     @objc func back(){
+        // 1、通过协议返回传值
+        detegate?.sentData(s: "我是回传过去的值")
+        // 2、通过闭包传值
+        self.closure!("我是回传过去的值2")
         dismiss(animated: true, completion: nil)
     }
     
@@ -56,4 +62,9 @@ class ViewControllerTwo: UIViewController {
     }
     */
 
+    var detegate:ViewControllerTwoProtocal? = nil
+    
+}
+protocol ViewControllerTwoProtocal {
+    func sentData(s:String)
 }

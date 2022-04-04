@@ -8,8 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, ViewControllerTwoProtocal {
+   
     /*
      *依次执行：
      *loadView
@@ -36,6 +36,10 @@ class ViewController: UIViewController {
         button.setTitle("跳转", for: .normal)
         button.addTarget(self, action: #selector(jump), for:UIControl.Event.touchUpInside)
         self.view.addSubview(button)
+        
+        // 回显的文字
+        label = UILabel(frame: CGRect(x: 20, y: 200, width: 200, height: 40))
+        self.view.addSubview(label!)
     }
     
     @objc func jump(){
@@ -43,7 +47,20 @@ class ViewController: UIViewController {
         let vct = ViewControllerTwo(data: "这是传过来的数据")
         // 1、直接赋值
 //        vct.data = "这是传过来的数据";
+        
+        // a.回传值 1种方式，通过回调
+        vct.detegate = self
+        // b.回传值 2种方式，对闭包进行赋值
+        vct.closure = { (data:String) in
+            self.label?.text = data
+        }
         self.present(vct, animated: true, completion: nil)
+    }
+    
+    var label:UILabel? = nil
+    func sentData(s: String) {
+        label?.text = s
+        print("从上一个页面回传过来的值：\(s)")
     }
     
     // 界面将要显示时
