@@ -16,6 +16,9 @@ class ViewControllerFour: UIViewController {
         self.tabBarItem.title = "个人中心"
         self.view.backgroundColor = UIColor.blue
         // Do any additional setup after loading the view.
+        
+        self.tabBarItem.badgeValue = "新消息"
+        self.tabBarItem.badgeColor = UIColor.orange
     }
     
 

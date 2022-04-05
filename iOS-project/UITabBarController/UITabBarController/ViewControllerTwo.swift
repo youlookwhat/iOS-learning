@@ -16,6 +16,9 @@ class ViewControllerTwo: UIViewController {
         self.tabBarItem.title = "推荐"
         self.view.backgroundColor = UIColor.red
         // Do any additional setup after loading the view.
+        
+        let item = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
+        self.tabBarItem = item
     }
     
 

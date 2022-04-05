@@ -1,24 +1,19 @@
 //
-//  ViewControllerThree.swift
+//  ViewControllerHistory.swift
 //  UITabBarController
 //
-//  Created by 景彬 on 2022/4/4.
+//  Created by 景彬 on 2022/4/5.
 //  Copyright © 2022 景彬. All rights reserved.
 //
 
 import UIKit
 
-class ViewControllerThree: UIViewController {
+class ViewControllerHistory: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBarItem.title = "搜索"
-        self.view.backgroundColor = UIColor.white
         // Do any additional setup after loading the view.
-        
-        let item = UITabBarItem(tabBarSystemItem: .search, tag: 1)
-        self.tabBarItem = item
     }
     
 
