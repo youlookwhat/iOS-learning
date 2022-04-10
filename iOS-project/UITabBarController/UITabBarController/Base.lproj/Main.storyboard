@@ -55,6 +55,7 @@
                         <segue destination="ApR-LS-hP9" kind="relationship" relationship="viewControllers" id="Czp-hn-JyY"/>
                         <segue destination="rSq-gx-Yms" kind="relationship" relationship="viewControllers" id="HA2-qA-B8w"/>
                         <segue destination="tcZ-3x-3KR" kind="relationship" relationship="viewControllers" id="gh5-x4-1Sb"/>
+                        <segue destination="q5e-za-w5y" kind="relationship" relationship="viewControllers" id="gn7-gl-DMA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNm-nZ-q3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -124,6 +125,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWr-yf-OzG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="422" y="-349"/>
+        </scene>
+        <!--TableViewCustom-->
+        <scene sceneID="8bg-oD-Wfw">
+            <objects>
+                <viewController id="q5e-za-w5y" customClass="ViewControllerTableViewCustom" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TYX-qF-kbA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="hTJ-tk-coz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="TableViewCustom" id="Mz5-Nw-Jnq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0es-1a-52Q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1159" y="1375"/>
         </scene>
     </scenes>
 </document>
