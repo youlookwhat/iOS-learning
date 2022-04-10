@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewControllerTop: UIViewController,UIScrollViewDelegate {
+class ViewControllerScrollView: UIViewController,UIScrollViewDelegate {
 
     
     var   image:UIImageView? = nil

@@ -96,7 +96,7 @@
         <!--UIScrollView-->
         <scene sceneID="QXk-4X-Ft4">
             <objects>
-                <viewController id="rSq-gx-Yms" customClass="ViewControllerTop" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="rSq-gx-Yms" customClass="ViewControllerScrollView" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gbW-iV-Mbp">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -109,17 +109,17 @@
             </objects>
             <point key="canvasLocation" x="-842" y="367"/>
         </scene>
-        <!--Item-->
+        <!--UITableView-->
         <scene sceneID="mjw-YX-KSS">
             <objects>
-                <viewController id="tcZ-3x-3KR" customClass="ViewControllerHistory" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="tcZ-3x-3KR" customClass="ViewControllerTableView" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dwG-DH-5ya">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="iL3-ij-e04"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pRG-2V-Cqn"/>
+                    <tabBarItem key="tabBarItem" title="UITableView" id="pRG-2V-Cqn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eWr-yf-OzG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

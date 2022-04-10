@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7C161B0B27FC8CAA0069D514 /* ViewControllerTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B0A27FC8CAA0069D514 /* ViewControllerTop.swift */; };
-		7C161B0D27FC8CB70069D514 /* ViewControllerHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B0C27FC8CB70069D514 /* ViewControllerHistory.swift */; };
+		7C161B0B27FC8CAA0069D514 /* ViewControllerScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B0A27FC8CAA0069D514 /* ViewControllerScrollView.swift */; };
+		7C161B0D27FC8CB70069D514 /* ViewControllerTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B0C27FC8CB70069D514 /* ViewControllerTableView.swift */; };
 		7C161B18280278BF0069D514 /* home_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C161B16280278BF0069D514 /* home_selected.png */; };
 		7C161B19280278BF0069D514 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 7C161B17280278BF0069D514 /* home.png */; };
 		7CBF544D27FB253C0050647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF544C27FB253C0050647D /* AppDelegate.swift */; };
@@ -24,8 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7C161B0A27FC8CAA0069D514 /* ViewControllerTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTop.swift; sourceTree = "<group>"; };
-		7C161B0C27FC8CB70069D514 /* ViewControllerHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHistory.swift; sourceTree = "<group>"; };
+		7C161B0A27FC8CAA0069D514 /* ViewControllerScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerScrollView.swift; sourceTree = "<group>"; };
+		7C161B0C27FC8CB70069D514 /* ViewControllerTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableView.swift; sourceTree = "<group>"; };
 		7C161B16280278BF0069D514 /* home_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_selected.png; path = ../../../../../../../Downloads/home_selected.png; sourceTree = "<group>"; };
 		7C161B17280278BF0069D514 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		7CBF544927FB253C0050647D /* UITabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,8 +85,8 @@
 				7CBF546227FB2A0A0050647D /* ViewControllerTwo.swift */,
 				7CBF546427FB2A140050647D /* ViewControllerThree.swift */,
 				7CBF546627FB2A200050647D /* ViewControllerFour.swift */,
-				7C161B0A27FC8CAA0069D514 /* ViewControllerTop.swift */,
-				7C161B0C27FC8CB70069D514 /* ViewControllerHistory.swift */,
+				7C161B0A27FC8CAA0069D514 /* ViewControllerScrollView.swift */,
+				7C161B0C27FC8CB70069D514 /* ViewControllerTableView.swift */,
 			);
 			path = UITabBarController;
 			sourceTree = "<group>";
@@ -165,11 +165,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CBF546327FB2A0A0050647D /* ViewControllerTwo.swift in Sources */,
-				7C161B0D27FC8CB70069D514 /* ViewControllerHistory.swift in Sources */,
+				7C161B0D27FC8CB70069D514 /* ViewControllerTableView.swift in Sources */,
 				7CBF546527FB2A140050647D /* ViewControllerThree.swift in Sources */,
 				7CBF545127FB253C0050647D /* ViewController.swift in Sources */,
 				7CBF544D27FB253C0050647D /* AppDelegate.swift in Sources */,
-				7C161B0B27FC8CAA0069D514 /* ViewControllerTop.swift in Sources */,
+				7C161B0B27FC8CAA0069D514 /* ViewControllerScrollView.swift in Sources */,
 				7CBF544F27FB253C0050647D /* SceneDelegate.swift in Sources */,
 				7CBF546727FB2A200050647D /* ViewControllerFour.swift in Sources */,
 				7CBF546127FB29F80050647D /* ViewControllerOne.swift in Sources */,
