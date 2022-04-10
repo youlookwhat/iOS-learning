@@ -31,7 +31,7 @@ class ViewControllerTableViewCustom: UIViewController, UITableViewDelegate, UITa
         dataArray = [pro1,pro2]
         
         let tableview = UITableView(frame: self.view.frame,style: .plain)
-        tableview.register(UINib.init(nibName: "TableViewProCellTableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCellId")
+        tableview.register(UINib.init(nibName: "TableViewProCell", bundle: nil), forCellReuseIdentifier: "TableViewCellId")
         self.view.addSubview(tableview)
         
         tableview.delegate = self
@@ -53,7 +53,7 @@ class ViewControllerTableViewCustom: UIViewController, UITableViewDelegate, UITa
        
     // cell视图
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell : TableViewProCellTableViewCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellId", for: indexPath) as! TableViewProCellTableViewCell
+    let cell : TableViewProCell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellId", for: indexPath) as! TableViewProCell
     print(indexPath.row)
         let model = dataArray![indexPath.row]
         cell.proImageView.image =  UIImage(named: model.imageName!)

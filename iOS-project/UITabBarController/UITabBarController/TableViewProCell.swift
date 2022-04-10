@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TableViewProCellTableViewCell: UITableViewCell {
+class TableViewProCell: UITableViewCell {
 
     
     @IBOutlet weak var proImageView: UIImageView!
