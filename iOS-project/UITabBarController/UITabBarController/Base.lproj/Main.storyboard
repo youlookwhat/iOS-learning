@@ -61,7 +61,7 @@
             </objects>
             <point key="canvasLocation" x="494" y="970"/>
         </scene>
-        <!--旧网页-->
+        <!--UIWebView-->
         <scene sceneID="qet-M1-c6q">
             <objects>
                 <viewController id="Whv-5V-nXA" customClass="ViewControllerThree" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,13 +71,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="zgU-qf-Oo1"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="旧网页" id="eLN-4V-Hn8"/>
+                    <tabBarItem key="tabBarItem" title="UIWebView" id="eLN-4V-Hn8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iOL-l3-2yF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1159" y="731"/>
         </scene>
-        <!--网页-->
+        <!--WKWebView-->
         <scene sceneID="sj9-CW-QrV">
             <objects>
                 <viewController id="ApR-LS-hP9" customClass="ViewControllerFour" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,13 +87,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="o06-N2-n7r"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="网页" id="GGn-VT-2Dn"/>
+                    <tabBarItem key="tabBarItem" title="WKWebView" id="GGn-VT-2Dn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dJq-VN-6Pd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-174" y="731"/>
         </scene>
-        <!--滚动视图-->
+        <!--UIScrollView-->
         <scene sceneID="QXk-4X-Ft4">
             <objects>
                 <viewController id="rSq-gx-Yms" customClass="ViewControllerTop" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
@@ -103,7 +103,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="W0y-da-1ky"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="滚动视图" id="Cch-Ii-Ca2"/>
+                    <tabBarItem key="tabBarItem" title="UIScrollView" id="Cch-Ii-Ca2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IuS-TR-7WO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

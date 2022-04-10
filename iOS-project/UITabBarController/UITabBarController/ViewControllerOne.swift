@@ -17,9 +17,7 @@ class ViewControllerOne: UIViewController {
         self.view.backgroundColor = UIColor.red
         
         let image = UIImage(named: "home")
-        var cs =  image?.size
-        cs?.height = 20
-        cs?.width = 20
+        
         self.tabBarItem.image = image?.withRenderingMode(.alwaysOriginal)
         self.tabBarItem.selectedImage = UIImage(named: "home_selected")?.withRenderingMode(.alwaysOriginal)
         

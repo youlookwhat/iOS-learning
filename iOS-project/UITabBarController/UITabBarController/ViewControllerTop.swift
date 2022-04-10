@@ -16,9 +16,11 @@ class ViewControllerTop: UIViewController,UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.tabBarItem.title = "滚动视图"
+//        self.tabBarItem.title = "滚动视图"
         self.view.backgroundColor = UIColor.white
         
+        
+        // 滚动视图
         let sc = UIScrollView(frame: self.view.frame)
         self.view.addSubview(sc)
         
