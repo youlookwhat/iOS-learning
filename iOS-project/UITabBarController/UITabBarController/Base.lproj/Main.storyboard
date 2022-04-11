@@ -57,6 +57,7 @@
                         <segue destination="tcZ-3x-3KR" kind="relationship" relationship="viewControllers" id="gh5-x4-1Sb"/>
                         <segue destination="q5e-za-w5y" kind="relationship" relationship="viewControllers" id="gn7-gl-DMA"/>
                         <segue destination="PFg-vj-Y0e" kind="relationship" relationship="viewControllers" id="Tav-w3-XrE"/>
+                        <segue destination="Ydq-o5-wt9" kind="relationship" relationship="viewControllers" id="BfQ-UK-uhQ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNm-nZ-q3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -158,6 +159,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekO-LU-aBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1088" y="-349"/>
+        </scene>
+        <!--CollectionView-->
+        <scene sceneID="b3F-He-rEm">
+            <objects>
+                <viewController title="CollectionView" id="Ydq-o5-wt9" customClass="ViewControllerCollectionView" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MxH-WJ-7sa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LlH-dG-2V3"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="CollectionView" id="AYD-eu-g2p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8jo-6q-J5D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="494" y="970"/>
         </scene>
     </scenes>
 </document>
