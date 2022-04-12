@@ -46,6 +46,14 @@ class WaterFallLayout: UICollectionViewFlowLayout {
             artts.frame = CGRect(x: (self.minimumInteritemSpacing+WIDTH)*CGFloat(queue), y: CGFloat(tmpH), width: WIDTH, height: CGFloat(height))
             attributeArray?.append(artts)
         }
+        
+        // 高度计算
+        if queueHeight.one <= queueHeight.two {
+            self.itemSize = CGSize(width: WIDTH, height: CGFloat(queueHeight.two*2/self.itemCount) - self.minimumInteritemSpacing)
+        } else {
+            self.itemSize = CGSize(width: WIDTH, height: CGFloat(queueHeight.one*2/self.itemCount) - self.minimumInteritemSpacing)
+        }
+        
     }
     
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
