@@ -58,6 +58,7 @@
                         <segue destination="q5e-za-w5y" kind="relationship" relationship="viewControllers" id="gn7-gl-DMA"/>
                         <segue destination="PFg-vj-Y0e" kind="relationship" relationship="viewControllers" id="Tav-w3-XrE"/>
                         <segue destination="Ydq-o5-wt9" kind="relationship" relationship="viewControllers" id="BfQ-UK-uhQ"/>
+                        <segue destination="cJD-ba-b1o" kind="relationship" relationship="viewControllers" id="91d-S5-SBz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TNm-nZ-q3S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -173,6 +174,22 @@
                     <tabBarItem key="tabBarItem" title="CollectionView" id="AYD-eu-g2p"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8jo-6q-J5D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="494" y="970"/>
+        </scene>
+        <!--Animation-->
+        <scene sceneID="Skh-Nv-J0u">
+            <objects>
+                <viewController title="Animation" id="cJD-ba-b1o" customClass="ViewControllerAnimation" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3na-bj-har">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="XDU-Te-dGz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Animation" id="zed-Fy-z6X"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2T-pI-ejC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="494" y="970"/>
         </scene>

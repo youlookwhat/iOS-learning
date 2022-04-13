@@ -17,6 +17,7 @@
 		7C161B25280327F50069D514 /* ViewControllerTableViewIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B24280327F50069D514 /* ViewControllerTableViewIndex.swift */; };
 		7C161B2728047FDD0069D514 /* ViewControllerCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B2628047FDD0069D514 /* ViewControllerCollectionView.swift */; };
 		7C161B292805C9270069D514 /* WaterFallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B282805C9270069D514 /* WaterFallLayout.swift */; };
+		7C161B2B2807095D0069D514 /* ViewControllerAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B2A2807095D0069D514 /* ViewControllerAnimation.swift */; };
 		7CBF544D27FB253C0050647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF544C27FB253C0050647D /* AppDelegate.swift */; };
 		7CBF544F27FB253C0050647D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF544E27FB253C0050647D /* SceneDelegate.swift */; };
 		7CBF545127FB253C0050647D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF545027FB253C0050647D /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 		7C161B24280327F50069D514 /* ViewControllerTableViewIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTableViewIndex.swift; sourceTree = "<group>"; };
 		7C161B2628047FDD0069D514 /* ViewControllerCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCollectionView.swift; sourceTree = "<group>"; };
 		7C161B282805C9270069D514 /* WaterFallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterFallLayout.swift; sourceTree = "<group>"; };
+		7C161B2A2807095D0069D514 /* ViewControllerAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAnimation.swift; sourceTree = "<group>"; };
 		7CBF544927FB253C0050647D /* UITabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CBF544C27FB253C0050647D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CBF544E27FB253C0050647D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				7C161B24280327F50069D514 /* ViewControllerTableViewIndex.swift */,
 				7C161B2628047FDD0069D514 /* ViewControllerCollectionView.swift */,
 				7C161B282805C9270069D514 /* WaterFallLayout.swift */,
+				7C161B2A2807095D0069D514 /* ViewControllerAnimation.swift */,
 			);
 			path = UITabBarController;
 			sourceTree = "<group>";
@@ -193,6 +196,7 @@
 				7C161B22280307CB0069D514 /* TableViewProCell.swift in Sources */,
 				7CBF544D27FB253C0050647D /* AppDelegate.swift in Sources */,
 				7C161B0B27FC8CAA0069D514 /* ViewControllerScrollView.swift in Sources */,
+				7C161B2B2807095D0069D514 /* ViewControllerAnimation.swift in Sources */,
 				7C161B2728047FDD0069D514 /* ViewControllerCollectionView.swift in Sources */,
 				7CBF544F27FB253C0050647D /* SceneDelegate.swift in Sources */,
 				7CBF546727FB2A200050647D /* ViewControllerFour.swift in Sources */,
