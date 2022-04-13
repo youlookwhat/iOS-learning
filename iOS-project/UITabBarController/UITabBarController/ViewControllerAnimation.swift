@@ -11,12 +11,38 @@ import UIKit
 class ViewControllerAnimation: UIViewController {
 
     var animationView:UIView?
+    var animationView2:UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         studyAnimal()
+        studyTransAnimal()
     }
+    
+    // 转场动画
+    func studyTransAnimal(){
+        animationView2 = UIView(frame: CGRect(x: 220, y: 300, width: 100, height: 100))
+        animationView2?.backgroundColor = UIColor.red
+        self.view.addSubview(animationView2!)
+    }
+    
+    // 翻页动画
+    func transAnimal1(){
+        UIView.transition(with: animationView2!, duration: 3, options: .transitionCurlUp, animations: {
+            
+        }, completion: nil)
+    }
+    
+    // 真正的视图转场动画
+    func transAnimal2(){
+        let otherView = UIView(frame: CGRect(x: 20, y: 100, width: 280, height: 300))
+        otherView.backgroundColor = UIColor.blue
+        UIView.transition(from: animationView2!, to: otherView, duration: 3, options: .transitionFlipFromRight, completion: nil)
+    }
+    
+    
+    //------------------------------------------
     
     func studyAnimal(){
         animationView = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))
@@ -28,8 +54,11 @@ class ViewControllerAnimation: UIViewController {
 //        changeColor1s()
 //        changeColor1sFinish()
 //        changeColor1sDelay()
-        
         changeColor1sSpring()
+        
+        // 转场动画
+//        transAnimal1()
+        transAnimal2()
     }
     
     func changeColor1sSpring(){
