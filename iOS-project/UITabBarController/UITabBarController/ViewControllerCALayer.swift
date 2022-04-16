@@ -18,6 +18,60 @@ class ViewControllerCALayer: UIViewController {
         studyCAReplicatorLayer()
         studyCAShapeLayer()
         
+        /*
+         * CoreAnimation
+         *      - CAAnimation
+                    - CAPropertyAnimation 属性动画类
+                        - CABaseAnimation 基础的属性过渡动画
+                            - CASpringAnimation 弹簧效果的阻尼动画
+                        - CAKeyframeAnimation 关键帧属性过渡动画
+                    - CATransition 转场动画类
+                    - CAAnimationGroup 组合动画类
+         *
+         */
+//        studyCABaseAnimation();
+        studyCAKeyframeAnimation();
+        studyCASpringAnimation();
+        
+    }
+    
+    // 6.CASpringAnimation 阻尼动画
+    func studyCASpringAnimation(){
+        let animation = CASpringAnimation(keyPath: "position.y")
+        // 模拟重物质量
+        animation.mass = 2
+        // 弹簧劲度系数 越大回弹越快
+        animation.stiffness = 5
+        // 阻尼系数 越大幅度越小
+        animation.damping = 2
+        // 中心点的纵坐标到600？
+        animation.toValue = 600
+        animation.duration = 4
+        let layer = CALayer()
+        layer.position = CGPoint(x: 100, y: 500)
+        layer.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
+        layer.backgroundColor = UIColor.red.cgColor
+        self.view.layer.addSublayer(layer)
+        layer.add(animation, forKey: "")
+    }
+    
+    // 5.CAKeyframeAnimation 可以设置多个过渡值
+    func studyCAKeyframeAnimation(){
+        let animation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+        animation.values = [NSNumber(value: 0),NSNumber(value: Double.pi/4),NSNumber(value: 0),NSNumber(value: Double.pi)]
+        animation.duration = 3
+        self.view.layer.add(animation, forKey: "")
+    }
+    
+    // 4.CABaseAnimation 基础的属性过渡动画，只能设置起始值和终止值
+    func studyCABaseAnimation(){
+        let basicAni = CABasicAnimation(keyPath: "transform.rotation.z")
+        // 从0度开始旋转
+        basicAni.fromValue = NSNumber(value: 0)
+        // 旋转180度
+        basicAni.toValue = NSNumber(value: Double.pi)
+        basicAni.duration = 2
+        self.view.layer.add(basicAni, forKey: nil)
     }
     
     // 3.自定义图形形状，倒三角形 CAShapeLayer
