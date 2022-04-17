@@ -30,9 +30,45 @@ class ViewControllerCALayer: UIViewController {
          *
          */
 //        studyCABaseAnimation();
-        studyCAKeyframeAnimation();
+//        studyCAKeyframeAnimation();
         studyCASpringAnimation();
+        studyCATransition();
+        studyCAAnimationGroup()
         
+    }
+    
+    // 8.CAAnimationGroup 动画集合
+    func studyCAAnimationGroup(){
+        // 背景色过渡动画
+        let basicAni = CABasicAnimation(keyPath: "backgroundColor")
+        basicAni.toValue = UIColor.green.cgColor
+        // 变型动画
+        let basicAni2 = CABasicAnimation(keyPath: "transform.scale.x")
+        basicAni.toValue = NSNumber(value: 2)
+        // 动画集合
+        let groupAni = CAAnimationGroup()
+        groupAni.animations = [basicAni,basicAni2]
+        groupAni.duration = 3
+        let layer = CALayer()
+        layer.position = CGPoint(x: 250, y: 750)
+        layer.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
+        layer.add(groupAni, forKey: "")
+        self.view.layer.addSublayer(layer)
+    }
+    
+    // 7.CATransition layer出现时展示动画效果
+    func studyCATransition(){
+        let transAni = CATransition()
+        // push 压入效果 fade 渐入效果 moveId 移入效果 reveal 溶解效果
+        transAni.type = CATransitionType.push
+        // fromTop 从上侧执行
+        transAni.subtype = CATransitionSubtype.fromTop
+        let layer = CALayer()
+        layer.position = CGPoint(x: 100, y: 650)
+        layer.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
+        layer.backgroundColor = UIColor.red.cgColor
+        layer.add(transAni, forKey: "")
+        self.view.layer.addSublayer(layer)
     }
     
     // 6.CASpringAnimation 阻尼动画
