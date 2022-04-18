@@ -58,6 +58,7 @@
 		7C161B7A280DA05A0069D514 /* ConstraintDirectionalInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B55280DA05A0069D514 /* ConstraintDirectionalInsets.swift */; };
 		7C161B7B280DA05A0069D514 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B56280DA05A0069D514 /* ConstraintLayoutSupportDSL.swift */; };
 		7C161B7C280DA05A0069D514 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B57280DA05A0069D514 /* ConstraintMakerRelatable.swift */; };
+		7C161B7E280DB0170069D514 /* ViewControllerHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B7D280DB0170069D514 /* ViewControllerHttp.swift */; };
 		7CBF544D27FB253C0050647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF544C27FB253C0050647D /* AppDelegate.swift */; };
 		7CBF544F27FB253C0050647D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF544E27FB253C0050647D /* SceneDelegate.swift */; };
 		7CBF545127FB253C0050647D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF545027FB253C0050647D /* ViewController.swift */; };
@@ -122,6 +123,7 @@
 		7C161B55280DA05A0069D514 /* ConstraintDirectionalInsets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintDirectionalInsets.swift; sourceTree = "<group>"; };
 		7C161B56280DA05A0069D514 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		7C161B57280DA05A0069D514 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
+		7C161B7D280DB0170069D514 /* ViewControllerHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHttp.swift; sourceTree = "<group>"; };
 		7CBF544927FB253C0050647D /* UITabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CBF544C27FB253C0050647D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CBF544E27FB253C0050647D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -236,6 +238,7 @@
 				7C161B2A2807095D0069D514 /* ViewControllerAnimation.swift */,
 				7C161B2E2809AD320069D514 /* ViewControllerCALayer.swift */,
 				7C161B30280D90EE0069D514 /* ViewControllerAutoLayout.swift */,
+				7C161B7D280DB0170069D514 /* ViewControllerHttp.swift */,
 			);
 			path = UITabBarController;
 			sourceTree = "<group>";
@@ -368,6 +371,7 @@
 				7C161B6D280DA05A0069D514 /* ConstraintConstantTarget.swift in Sources */,
 				7C161B6C280DA05A0069D514 /* Typealiases.swift in Sources */,
 				7C161B31280D90EE0069D514 /* ViewControllerAutoLayout.swift in Sources */,
+				7C161B7E280DB0170069D514 /* ViewControllerHttp.swift in Sources */,
 				7C161B7A280DA05A0069D514 /* ConstraintDirectionalInsets.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
