@@ -10,7 +10,7 @@
         <!--Item 2-->
         <scene sceneID="H5f-YM-aXV">
             <objects>
-                <viewController id="IzA-lX-B7Y" customClass="ViewControllerTwo" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="IzA-lX-B7Y" customClass="ViewControllerFirstWidge" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vUx-40-v3N">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,8 +49,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="tGn-rK-Qc7" kind="relationship" relationship="viewControllers" id="m9A-jR-gpO"/>
                         <segue destination="IzA-lX-B7Y" kind="relationship" relationship="viewControllers" id="giT-8U-1ab"/>
+                        <segue destination="tGn-rK-Qc7" kind="relationship" relationship="viewControllers" id="m9A-jR-gpO"/>
                         <segue destination="Whv-5V-nXA" kind="relationship" relationship="viewControllers" id="k5N-Wq-FUn"/>
                         <segue destination="ApR-LS-hP9" kind="relationship" relationship="viewControllers" id="Czp-hn-JyY"/>
                         <segue destination="rSq-gx-Yms" kind="relationship" relationship="viewControllers" id="HA2-qA-B8w"/>
