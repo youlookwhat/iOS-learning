@@ -9,7 +9,7 @@
 import UIKit
 import WebKit
 
-class ViewControllerFour: UIViewController, WKScriptMessageHandler {
+class ViewControllerWKWebView: UIViewController, WKScriptMessageHandler {
 
     var webview:WKWebView? = nil
     var bt1:UIButton? = nil

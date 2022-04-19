@@ -87,7 +87,7 @@
         <!--WKWebView-->
         <scene sceneID="sj9-CW-QrV">
             <objects>
-                <viewController id="ApR-LS-hP9" customClass="ViewControllerFour" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ApR-LS-hP9" customClass="ViewControllerWKWebView" customModule="UITabBarController" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bw9-mM-NZg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

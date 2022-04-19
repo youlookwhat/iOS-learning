@@ -59,6 +59,7 @@
 		7C161B7B280DA05A0069D514 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B56280DA05A0069D514 /* ConstraintLayoutSupportDSL.swift */; };
 		7C161B7C280DA05A0069D514 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B57280DA05A0069D514 /* ConstraintMakerRelatable.swift */; };
 		7C161B7E280DB0170069D514 /* ViewControllerHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161B7D280DB0170069D514 /* ViewControllerHttp.swift */; };
+		7C161B80280EE98A0069D514 /* NewPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7C161B7F280EE98A0069D514 /* NewPlist.plist */; };
 		7CBF544D27FB253C0050647D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF544C27FB253C0050647D /* AppDelegate.swift */; };
 		7CBF544F27FB253C0050647D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF544E27FB253C0050647D /* SceneDelegate.swift */; };
 		7CBF545127FB253C0050647D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF545027FB253C0050647D /* ViewController.swift */; };
@@ -68,7 +69,7 @@
 		7CBF546127FB29F80050647D /* ViewControllerOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF546027FB29F80050647D /* ViewControllerOne.swift */; };
 		7CBF546327FB2A0A0050647D /* ViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF546227FB2A0A0050647D /* ViewControllerTwo.swift */; };
 		7CBF546527FB2A140050647D /* ViewControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF546427FB2A140050647D /* ViewControllerThree.swift */; };
-		7CBF546727FB2A200050647D /* ViewControllerFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF546627FB2A200050647D /* ViewControllerFour.swift */; };
+		7CBF546727FB2A200050647D /* ViewControllerWKWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBF546627FB2A200050647D /* ViewControllerWKWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -124,6 +125,7 @@
 		7C161B56280DA05A0069D514 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		7C161B57280DA05A0069D514 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		7C161B7D280DB0170069D514 /* ViewControllerHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerHttp.swift; sourceTree = "<group>"; };
+		7C161B7F280EE98A0069D514 /* NewPlist.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NewPlist.plist; sourceTree = "<group>"; };
 		7CBF544927FB253C0050647D /* UITabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UITabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7CBF544C27FB253C0050647D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7CBF544E27FB253C0050647D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +137,7 @@
 		7CBF546027FB29F80050647D /* ViewControllerOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerOne.swift; sourceTree = "<group>"; };
 		7CBF546227FB2A0A0050647D /* ViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTwo.swift; sourceTree = "<group>"; };
 		7CBF546427FB2A140050647D /* ViewControllerThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerThree.swift; sourceTree = "<group>"; };
-		7CBF546627FB2A200050647D /* ViewControllerFour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFour.swift; sourceTree = "<group>"; };
+		7CBF546627FB2A200050647D /* ViewControllerWKWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerWKWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,7 +228,7 @@
 				7CBF546027FB29F80050647D /* ViewControllerOne.swift */,
 				7CBF546227FB2A0A0050647D /* ViewControllerTwo.swift */,
 				7CBF546427FB2A140050647D /* ViewControllerThree.swift */,
-				7CBF546627FB2A200050647D /* ViewControllerFour.swift */,
+				7CBF546627FB2A200050647D /* ViewControllerWKWebView.swift */,
 				7C161B0A27FC8CAA0069D514 /* ViewControllerScrollView.swift */,
 				7C161B0C27FC8CB70069D514 /* ViewControllerTableView.swift */,
 				7C161B1A280282DB0069D514 /* ViewControllerTableViewCustom.swift */,
@@ -239,6 +241,7 @@
 				7C161B2E2809AD320069D514 /* ViewControllerCALayer.swift */,
 				7C161B30280D90EE0069D514 /* ViewControllerAutoLayout.swift */,
 				7C161B7D280DB0170069D514 /* ViewControllerHttp.swift */,
+				7C161B7F280EE98A0069D514 /* NewPlist.plist */,
 			);
 			path = UITabBarController;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				7C161B19280278BF0069D514 /* home.png in Resources */,
 				7C161B18280278BF0069D514 /* home_selected.png in Resources */,
 				7CBF545627FB253D0050647D /* Assets.xcassets in Resources */,
+				7C161B80280EE98A0069D514 /* NewPlist.plist in Resources */,
 				7CBF545427FB253C0050647D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,7 +370,7 @@
 				7C161B6F280DA05A0069D514 /* ConstraintMakerEditable.swift in Sources */,
 				7C161B69280DA05A0069D514 /* ConstraintView.swift in Sources */,
 				7CBF544F27FB253C0050647D /* SceneDelegate.swift in Sources */,
-				7CBF546727FB2A200050647D /* ViewControllerFour.swift in Sources */,
+				7CBF546727FB2A200050647D /* ViewControllerWKWebView.swift in Sources */,
 				7CBF546127FB29F80050647D /* ViewControllerOne.swift in Sources */,
 				7C161B6D280DA05A0069D514 /* ConstraintConstantTarget.swift in Sources */,
 				7C161B6C280DA05A0069D514 /* Typealiases.swift in Sources */,
