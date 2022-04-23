@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 面板
 class Board: UIView {
     
     override init(frame: CGRect) {

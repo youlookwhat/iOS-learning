@@ -52,6 +52,7 @@
 		7C161C012811A70B0069D514 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161BDC2811A70B0069D514 /* ConstraintMakerRelatable.swift */; };
 		7C161C052811A7A00069D514 /* FuncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161C042811A7A00069D514 /* FuncButton.swift */; };
 		7CAA51AD28141707005044DA /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA51AC28141707005044DA /* Board.swift */; };
+		7CAA51AF2814417F005044DA /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA51AE2814417F005044DA /* Screen.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		7C161BDC2811A70B0069D514 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		7C161C042811A7A00069D514 /* FuncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncButton.swift; sourceTree = "<group>"; };
 		7CAA51AC28141707005044DA /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		7CAA51AE2814417F005044DA /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 			children = (
 				7C161C042811A7A00069D514 /* FuncButton.swift */,
 				7CAA51AC28141707005044DA /* Board.swift */,
+				7CAA51AE2814417F005044DA /* Screen.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				7C161BF62811A70B0069D514 /* ConstraintRelation.swift in Sources */,
 				7C161BF42811A70B0069D514 /* ConstraintMakerEditable.swift in Sources */,
 				7C161C012811A70B0069D514 /* ConstraintMakerRelatable.swift in Sources */,
+				7CAA51AF2814417F005044DA /* Screen.swift in Sources */,
 				7C161BDF2811A70B0069D514 /* ConstraintMakerPrioritizable.swift in Sources */,
 				7C161BFC2811A70B0069D514 /* ConstraintRelatableTarget.swift in Sources */,
 				7C161BF92811A70B0069D514 /* ConstraintItem.swift in Sources */,

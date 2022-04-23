@@ -8,6 +8,7 @@
 
 import UIKit
 
+// 单个按钮
 class FuncButton: UIButton {
 
     init() {
