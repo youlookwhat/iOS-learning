@@ -51,6 +51,7 @@
 		7C161C002811A70B0069D514 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161BDB2811A70B0069D514 /* ConstraintLayoutSupportDSL.swift */; };
 		7C161C012811A70B0069D514 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161BDC2811A70B0069D514 /* ConstraintMakerRelatable.swift */; };
 		7C161C052811A7A00069D514 /* FuncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161C042811A7A00069D514 /* FuncButton.swift */; };
+		7CAA51AD28141707005044DA /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA51AC28141707005044DA /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		7C161BDB2811A70B0069D514 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		7C161BDC2811A70B0069D514 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
 		7C161C042811A7A00069D514 /* FuncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncButton.swift; sourceTree = "<group>"; };
+		7CAA51AC28141707005044DA /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				7C161C042811A7A00069D514 /* FuncButton.swift */,
+				7CAA51AC28141707005044DA /* Board.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 				7C161BFF2811A70B0069D514 /* ConstraintDirectionalInsets.swift in Sources */,
 				7C161BE32811A70B0069D514 /* ConstraintPriorityTarget.swift in Sources */,
 				7C161BF22811A70B0069D514 /* ConstraintConstantTarget.swift in Sources */,
+				7CAA51AD28141707005044DA /* Board.swift in Sources */,
 				7C161BE62811A70B0069D514 /* ConstraintDSL.swift in Sources */,
 				7C161BE82811A70B0069D514 /* ConstraintPriority.swift in Sources */,
 				7C161BEF2811A70B0069D514 /* ConstraintLayoutGuide.swift in Sources */,

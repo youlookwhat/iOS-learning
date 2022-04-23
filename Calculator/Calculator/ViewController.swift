@@ -18,7 +18,14 @@ class ViewController: UIViewController {
         b.frame = CGRect(x: 20, y: 20, width: 200, height: 200)
         b.setTitle("sdfs", for: .normal)
         
-        self.view.addSubview(b)
+//        self.view.addSubview(b)
+        
+        let board = Board()
+        self.view.addSubview(board)
+        board.snp.makeConstraints({(maker) in
+            maker.left.right.bottom.equalTo(0)
+            maker.height.equalTo(self.view).multipliedBy(5/8.0)
+        })
         
     }
 
