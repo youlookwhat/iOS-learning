@@ -72,6 +72,7 @@ class Screen: UIView {
         })
     }
     
+    // 输入
     func inputContent(content:String){
         // 如果不是数字 和 不是运算符，不处理
         if !figureArray.contains(content.last!) && !funcArray.contains(content) {
@@ -103,6 +104,21 @@ class Screen: UIView {
         historyString = inputString
         historyLable.text = historyString
     }
+    
+    // 清空
+    func clearContent(){
+        inputString = ""
+    }
+    
+    // delete键
+    func deleteInput(){
+        if inputString.count>0{
+            // 删除当前输入的上一个字符
+            inputString.remove(at: inputString.index(before: inputString.endIndex))
+            inputLable.text = inputString
+        }
+    }
+    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

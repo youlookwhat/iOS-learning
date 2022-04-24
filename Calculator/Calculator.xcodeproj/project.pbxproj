@@ -53,6 +53,7 @@
 		7C161C052811A7A00069D514 /* FuncButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C161C042811A7A00069D514 /* FuncButton.swift */; };
 		7CAA51AD28141707005044DA /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA51AC28141707005044DA /* Board.swift */; };
 		7CAA51AF2814417F005044DA /* Screen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA51AE2814417F005044DA /* Screen.swift */; };
+		7CAA51B128158CFA005044DA /* CalculatorEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CAA51B028158CFA005044DA /* CalculatorEngine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +105,7 @@
 		7C161C042811A7A00069D514 /* FuncButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FuncButton.swift; sourceTree = "<group>"; };
 		7CAA51AC28141707005044DA /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		7CAA51AE2814417F005044DA /* Screen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Screen.swift; sourceTree = "<group>"; };
+		7CAA51B028158CFA005044DA /* CalculatorEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorEngine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +201,7 @@
 				7C161C042811A7A00069D514 /* FuncButton.swift */,
 				7CAA51AC28141707005044DA /* Board.swift */,
 				7CAA51AE2814417F005044DA /* Screen.swift */,
+				7CAA51B028158CFA005044DA /* CalculatorEngine.swift */,
 			);
 			path = widget;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				7C161BA82811A6C00069D514 /* ViewController.swift in Sources */,
 				7C161BE92811A70B0069D514 /* ConstraintInsetTarget.swift in Sources */,
 				7C161BFB2811A70B0069D514 /* Debugging.swift in Sources */,
+				7CAA51B128158CFA005044DA /* CalculatorEngine.swift in Sources */,
 				7C161BF52811A70B0069D514 /* ConstraintMaker.swift in Sources */,
 				7C161BDE2811A70B0069D514 /* LayoutConstraintItem.swift in Sources */,
 				7C161BF82811A70B0069D514 /* ConstraintView+Extensions.swift in Sources */,
