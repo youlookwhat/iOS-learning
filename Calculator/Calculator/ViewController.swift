@@ -12,6 +12,8 @@ class ViewController: UIViewController, BoardButtonInputDelegate {
 
     var board:Board!
     var screen:Screen!
+    let callulator = CalculatorEngine()
+    var isNew = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,8 +46,29 @@ class ViewController: UIViewController, BoardButtonInputDelegate {
 
     func boardButtonClick(content: String) {
         if content == "AC" || content == "Delete" || content == "=" {
-            screen.refreshHistory()
+            switch content {
+            case "AC":
+                screen.clearContent()
+                screen.refreshHistory()
+            case "Delete":
+                screen.deleteInput()
+                break
+            case "=":
+                let result = callulator.calculatEquation(equation: screen.inputString)
+                screen.refreshHistory()
+                screen.clearContent()
+                // 将结果输入
+                screen.inputContent(content: String(result))
+                isNew = true
+                break
+            default:
+                screen.refreshHistory()
+            }
         } else {
+            if isNew {
+                screen.clearContent()
+                isNew = false
+            }
             screen.inputContent(content: content)
         }
     }
