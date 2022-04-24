@@ -62,6 +62,14 @@ class Board: UIView {
     
     @objc func btnClick(button:FuncButton){
         print(button.title(for: .normal))
+        delegate?.boardButtonClick(content: button.currentTitle!)
     }
 
+    var delegate : BoardButtonInputDelegate?
+    
+    
+}
+
+protocol BoardButtonInputDelegate {
+    func boardButtonClick(content:String)
 }
